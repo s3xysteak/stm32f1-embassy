@@ -1,6 +1,7 @@
 #![no_std]
 #![no_main]
 
+use defmt::info;
 use embassy_executor::Spawner;
 use embassy_stm32::gpio::{Level, Output, Speed};
 use embassy_time::Timer;
@@ -15,7 +16,8 @@ async fn main(spawner: Spawner) {
     spawner.spawn(run(led)).unwrap();
 
     loop {
-        Timer::after_micros(1).await;
+        Timer::after_millis(1000).await;
+        info!("hello!")
     }
 }
 

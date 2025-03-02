@@ -12,6 +12,6 @@ async fn main(_spawner: Spawner) {
 
     loop {
         info!("Hello!");
-        Timer::after_millis(1000).await;
+        Timer::after_nanos(1_000_000_000).await;
     }
 }
