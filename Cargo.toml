@@ -12,6 +12,7 @@ embassy-stm32 = { version = "0.2.0", features = [
   "stm32f103c8",
   "unstable-pac",
   "memory-x",
+  "time",
   "time-driver-any",
 ] }
 embassy-sync = { version = "0.6.2", features = ["defmt"] }
@@ -23,7 +24,6 @@ embassy-executor = { version = "0.7.0", features = [
 embassy-time = { version = "0.4.0", features = [
   "defmt",
   "defmt-timestamp-uptime",
-  "tick-hz-32_768",
 ] }
 embassy-usb = { version = "0.4.0", features = ["defmt"] }
 defmt = "0.3"
